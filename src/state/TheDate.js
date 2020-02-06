@@ -5,10 +5,19 @@ class TheDate extends React.Component {
         super(props)
         this.state = { datetime: new Date() }
     }
+    componentDidMount() {
+        this.interval = setInterval(() => {
+            this.setState({
+                datetime: new Date()
+              })
+            }, 1000)
+    }
+    componentWillUnmount() {
+        clearInterval(this.interval)
+    }
     render() {
-    console.log(this.state)
-      return (
-        <div>{this.state.datetime.toLocaleString()}</div>
+        return (
+            <div>{this.state.datetime.toLocaleString()}</div>
       )
     }
   }
