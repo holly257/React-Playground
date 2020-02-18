@@ -1,38 +1,43 @@
 import React from 'react';
 import './App.css';
 import Split from './composition/Split';
-// import Tooltip from './composition/Tooltip';
+import Tooltip from './composition/Tooltip';
 // import TheDate from './state/TheDate';
 // import Counter from './state/Counter';
 // import Tabs from './Tabs';
 // import Accordion from './state-drills/Accordion';
 
-function App(){
+// make 2 tooltips here and another inside the App directly
+const firstTooltip = (
+  <Tooltip color='hotpink' message='tooltip message'>
+    ipsum
+  </Tooltip>
+)
+const secondTooltip = (
+  <Tooltip color='#126BCC' message='another tooltip message'>
+    officiis
+  </Tooltip>
+)
+
+function App() {
   return (
     <main className='App'>
-      <Split className='left'>
-        This is the content for the left `Split`. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?
+      <hr />
+      <Split className='left' flexBasis='2'>
+        This is the content for the left Split. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?<br />
+        {/* make another tooltip directly inside the App */}
+        <Tooltip message='one more tooltip message'>
+          Necessitatibus?
+        </Tooltip>
       </Split>
       <Split className='right'>
-        This is the content for the right `Split`. Inventore aliquid cupiditate suscipit repellat. Quaerat quis officiis quam fuga. Aliquid quo possimus id soluta aspernatur.
+        This is the content for the right Split. Inventore aliquid cupiditate suscipit repellat. Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.
       </Split>
     </main>
-  );
+  )
 }
 
 export default App;
-
-// make 2 tooltips here and another inside the App directly
-// const firstTooltip = (
-//   <Tooltip color='hotpink' message='tooltip message'>
-//    ipsum
-//   </Tooltip>
-// )
-// const secondTooltip = (
-//   <Tooltip color='#126BCC' message='another tooltip message'>
-//     officiis
-//   </Tooltip>
-// )
 
 // const tabsProp = [
 //   { name: 'First tab',
@@ -57,29 +62,3 @@ export default App;
 //     content: 'Animi amet cumque sint cupiditate officia ab voluptatibus libero optio et?',
 //   },
 // ]
-
-// function App() {
-//   return (
-//     <Accordion sections={sections} />
-//     // <main className='App'>
-//     //   <TheDate />
-//     //   <Counter />
-//     //   <div>
-//     //     <Tabs tabs={tabsProp} />
-//     //   </div>
-//     //   <hr />
-//     //   <Split className='left' flexBasis='2'>
-//     //     This is the content for the left Split. Lorem {firstTooltip} dolor sit amet consectetur, adipisicing elit. Incidunt ex velit suscipit facere officia?<br />
-//     //     {/* make another tooltip directly inside the App */}
-//     //     <Tooltip message='one more tooltip message'>
-//     //       Necessitatibus?
-//     //     </Tooltip>
-//     //   </Split>
-//     //   <Split className='right'>
-//     //     This is the content for the right Split. Inventore aliquid cupiditate suscipit repellat. Quaerat quis {secondTooltip} quam fuga. Aliquid quo possimus id soluta aspernatur.
-//     //   </Split>
-//     // </main>
-//   )
-// }
-
-// export default App;
