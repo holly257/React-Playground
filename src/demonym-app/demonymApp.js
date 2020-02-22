@@ -12,6 +12,12 @@ class DemonymApp extends React.Component {
         };
     }
 
+    setSelected(selected) {
+        this.setState({
+            selected
+        });
+    }
+
     componentDidMount(){
         fetch('https://country.register.gov.uk/records.json?page-size=5000')
             .then(response => response.json())
@@ -34,7 +40,10 @@ class DemonymApp extends React.Component {
 
         return (
             <div className='demonym_app'>
-                <CountrySelector countries={this.state.countries} />
+                <CountrySelector 
+                    countries={this.state.countries} 
+                    changeHandler={selected => this.setSelected(selected)}
+                />
                 {demon}
             </div>
         );
