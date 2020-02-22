@@ -1,0 +1,1 @@
+// add  a smoke test to demonym.test.js and any CSS you wish to demonym.css

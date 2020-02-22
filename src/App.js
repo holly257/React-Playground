@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import DemonymApp from './demonym-app/demonymApp';
+
 // import Split from './composition/Split';
 // import Tooltip from './composition/Tooltip';
 // import TheDate from './state/TheDate';
@@ -7,7 +9,11 @@ import './App.css';
 // import Tabs from './Tabs';
 // import Accordion from './state-drills/Accordion';
 
-
+export default function App (){
+    return (
+        <DemonymApp />
+    )
+}
 
 // make 2 tooltips here and another inside the App directly
 // const firstTooltip = (
