@@ -4,7 +4,6 @@ import LanguageContext from '../languageContext';
 export default function LangControls(props) {
   return (
     <LanguageContext.Consumer>
-        {function renderProp(){
         {(value) => {
             console.log(value)
             return (
@@ -28,7 +27,6 @@ export default function LangControls(props) {
                     </button>
                 </> 
             )
-        }}
         }}
     </LanguageContext.Consumer>
     
