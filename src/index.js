@@ -4,7 +4,8 @@ import { BrowserRouter } from 'react-router-dom';
 // import App from './App';
 // import App from './power-toes/App'
 // import AppLang from './lang-context/AppLang';
-import AppRegistrationForm from './registrationForm/registrationForm';
+// import AppRegistrationForm from './registrationForm/registrationForm';
+import App from './PlayingWithDanger/App';
 import './index.css';
 
-ReactDOM.render(<BrowserRouter><AppRegistrationForm /></BrowserRouter>, document.getElementById('root'));
+ReactDOM.render(<BrowserRouter><App /></BrowserRouter>, document.getElementById('root'));
